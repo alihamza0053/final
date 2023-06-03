@@ -54,7 +54,7 @@ class MainActivity : ComponentActivity() {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(0xFF000000))
+                        .background(Color(0xFFf6d7b0))
                 ) {
                     Column(
                         modifier = Modifier.align(Alignment.Center),
