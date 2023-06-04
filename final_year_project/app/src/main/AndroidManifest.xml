@@ -33,20 +33,19 @@
             android:name=".Services"
             android:exported="true"
             android:label="@string/title_activity_services"
-            android:theme="@style/Theme.DigitalYazman"></activity>
+            android:theme="@style/Theme.DigitalYazman">
+        </activity>
         <activity
             android:name=".Opportunities"
             android:exported="true"
             android:label="@string/title_activity_opportunities"
             android:theme="@style/Theme.DigitalYazman">
-
         </activity>
         <activity
             android:name=".LocalNews"
             android:exported="true"
             android:label="@string/title_activity_local_news"
             android:theme="@style/Theme.DigitalYazman">
-
         </activity>
         <activity
             android:name=".LocalDeals"
