@@ -211,7 +211,7 @@ class menuActivity : ComponentActivity() {
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
-                                backgroundColor = Color(0xFFf2f2f2),
+                                backgroundColor = Color(0xFFF7D8BA),
                                 modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(
