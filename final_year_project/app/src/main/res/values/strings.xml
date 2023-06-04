@@ -2,4 +2,13 @@
     <string name="app_name">Digital Yazman</string>
     <string name="title_activity_menu">menuActivity</string>
     <string name="title_activity_businesses">businesses</string>
+    <string name="title_activity_emergency">EmergencyActivity</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="title_activity_local_deals">LocalDeals</string>
+    <string name="title_activity_local_news">LocalNews</string>
+    <string name="title_activity_opportunities">Opportunities</string>
+    <string name="title_activity_services">Services</string>
+    <string name="title_activity_support">Support</string>
+    <string name="title_activity_transport">Transport</string>
+    <string name="title_activity_login">Login</string>
 </resources>

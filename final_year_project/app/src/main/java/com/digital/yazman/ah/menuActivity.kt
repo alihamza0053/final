@@ -99,12 +99,10 @@ class menuActivity : ComponentActivity() {
                         modifier = Modifier
                             .background(Color(0xFF800080))
                             .fillMaxWidth()
-                            .padding(10.dp),
-                        verticalAlignment = Alignment.CenterVertically
+                            .padding(10.dp), verticalAlignment = Alignment.CenterVertically
 
                     ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.back_white),
+                        Image(painter = painterResource(id = R.drawable.back_white),
                             contentDescription = null,
                             modifier = Modifier
                                 .width(25.dp)
@@ -122,11 +120,9 @@ class menuActivity : ComponentActivity() {
                                     } else if (exit > 0) {
                                         finish()
                                     }
-                                }
-                        )
+                                })
                         Spacer(
-                            modifier = Modifier
-                                .weight(1f)
+                            modifier = Modifier.weight(1f)
                         )
                         Text(
                             text = "Ali Hamza",
@@ -135,29 +131,28 @@ class menuActivity : ComponentActivity() {
                             fontWeight = FontWeight.Bold,
                             color = Color(0xFFFFFFFF),
                         )
-                        Image(painter = painterResource(id = R.drawable.admin_king), contentDescription = null,
-                        modifier = Modifier
-                            .width(15.dp)
-                            .height(15.dp))
-                        Spacer(
+                        Image(
+                            painter = painterResource(id = R.drawable.admin_king),
+                            contentDescription = null,
                             modifier = Modifier
-                                .weight(1f)
+                                .width(15.dp)
+                                .height(15.dp)
                         )
-                        Text(
-                            text = "Login",
+                        Spacer(
+                            modifier = Modifier.weight(1f)
+                        )
+                        Text(text = "Login",
                             fontSize = 15.sp,
                             fontFamily = fontFamily,
                             fontWeight = FontWeight.Bold,
                             color = Color(0xFFFFFFFF),
-                            modifier = Modifier
-                                .clickable {
-                                    Toast.makeText(
-                                        applicationContext,
-                                        "Login",
-                                        Toast.LENGTH_SHORT
-                                    ).show()
-                                }
-                        )
+                            modifier = Modifier.clickable {
+                                    context.startActivity(
+                                        Intent(
+                                            context, Login::class.java
+                                        )
+                                    )
+                                })
                     }
 
                     // topbar end
@@ -204,8 +199,7 @@ class menuActivity : ComponentActivity() {
                         Row(
                             horizontalArrangement = Arrangement.Center,
                             verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier
-                                .fillMaxWidth()
+                            modifier = Modifier.fillMaxWidth()
                         ) {
                             //first row first card
                             Card(
@@ -223,8 +217,7 @@ class menuActivity : ComponentActivity() {
                                         .clickable {
                                             context.startActivity(
                                                 Intent(
-                                                    context,
-                                                    businesses::class.java
+                                                    context, Businesses::class.java
                                                 )
                                             )
                                         },
@@ -262,13 +255,11 @@ class menuActivity : ComponentActivity() {
                                         .height(90.dp)
                                         .width(90.dp)
                                         .clickable {
-                                            Toast
-                                                .makeText(
-                                                    applicationContext,
-                                                    "Emergency",
-                                                    Toast.LENGTH_SHORT
+                                            context.startActivity(
+                                                Intent(
+                                                    context, Emergency::class.java
                                                 )
-                                                .show()
+                                            )
                                         },
 
                                     ) {
@@ -304,13 +295,11 @@ class menuActivity : ComponentActivity() {
                                         .height(90.dp)
                                         .width(90.dp)
                                         .clickable {
-                                            Toast
-                                                .makeText(
-                                                    applicationContext,
-                                                    "History",
-                                                    Toast.LENGTH_SHORT
+                                            context.startActivity(
+                                                Intent(
+                                                    context, History::class.java
                                                 )
-                                                .show()
+                                            )
                                         },
 
                                     ) {
@@ -338,8 +327,7 @@ class menuActivity : ComponentActivity() {
                         Row(
                             horizontalArrangement = Arrangement.Center,
                             verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier
-                                .fillMaxWidth()
+                            modifier = Modifier.fillMaxWidth()
                         ) {
                             //second row first card
                             Card(
@@ -355,13 +343,11 @@ class menuActivity : ComponentActivity() {
                                         .height(90.dp)
                                         .width(90.dp)
                                         .clickable {
-                                            Toast
-                                                .makeText(
-                                                    applicationContext,
-                                                    "Local Deals",
-                                                    Toast.LENGTH_SHORT
+                                            context.startActivity(
+                                                Intent(
+                                                    context, LocalDeals::class.java
                                                 )
-                                                .show()
+                                            )
                                         },
 
                                     ) {
@@ -397,13 +383,11 @@ class menuActivity : ComponentActivity() {
                                         .height(90.dp)
                                         .width(90.dp)
                                         .clickable {
-                                            Toast
-                                                .makeText(
-                                                    applicationContext,
-                                                    "Local News",
-                                                    Toast.LENGTH_SHORT
+                                            context.startActivity(
+                                                Intent(
+                                                    context, LocalNews::class.java
                                                 )
-                                                .show()
+                                            )
                                         },
 
                                     ) {
@@ -439,13 +423,12 @@ class menuActivity : ComponentActivity() {
                                         .height(90.dp)
                                         .width(90.dp)
                                         .clickable {
-                                            Toast
-                                                .makeText(
-                                                    applicationContext,
-                                                    "Opportunities",
-                                                    Toast.LENGTH_SHORT
+                                            context.startActivity(
+                                                Intent(
+                                                    context, Opportunities::class.java
+
                                                 )
-                                                .show()
+                                            )
                                         },
 
                                     ) {
@@ -472,8 +455,7 @@ class menuActivity : ComponentActivity() {
                         Row(
                             horizontalArrangement = Arrangement.Center,
                             verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier
-                                .fillMaxWidth()
+                            modifier = Modifier.fillMaxWidth()
                         ) {
                             //third row first card
                             Card(
@@ -489,13 +471,11 @@ class menuActivity : ComponentActivity() {
                                         .height(90.dp)
                                         .width(90.dp)
                                         .clickable {
-                                            Toast
-                                                .makeText(
-                                                    applicationContext,
-                                                    "Services",
-                                                    Toast.LENGTH_SHORT
+                                            context.startActivity(
+                                                Intent(
+                                                    context, Services::class.java
                                                 )
-                                                .show()
+                                            )
                                         },
 
                                     ) {
@@ -531,13 +511,11 @@ class menuActivity : ComponentActivity() {
                                         .height(90.dp)
                                         .width(90.dp)
                                         .clickable {
-                                            Toast
-                                                .makeText(
-                                                    applicationContext,
-                                                    "Support",
-                                                    Toast.LENGTH_SHORT
+                                            context.startActivity(
+                                                Intent(
+                                                    context, Support::class.java
                                                 )
-                                                .show()
+                                            )
                                         },
 
                                     ) {
@@ -573,13 +551,11 @@ class menuActivity : ComponentActivity() {
                                         .height(90.dp)
                                         .width(90.dp)
                                         .clickable {
-                                            Toast
-                                                .makeText(
-                                                    applicationContext,
-                                                    "Transport",
-                                                    Toast.LENGTH_SHORT
+                                            context.startActivity(
+                                                Intent(
+                                                    context, Transport::class.java
                                                 )
-                                                .show()
+                                            )
                                         },
 
                                     ) {
@@ -630,7 +606,7 @@ fun DotsIndicator(
     modifier: Modifier = Modifier,
     totalDots: Int,
     selectedIndex: Int,
-    selectedColor: Color = Color.Yellow,
+    selectedColor: Color = Color(0xFFADD8E6),
     unSelectedColor: Color = Color.Gray,
     dotSize: Dp
 ) {

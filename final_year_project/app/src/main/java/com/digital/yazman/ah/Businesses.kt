@@ -20,10 +20,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Card
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -37,9 +34,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.digital.yazman.ah.ui.theme.DigitalYazmanTheme
-import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
-class businesses : ComponentActivity() {
+class Businesses : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -72,7 +68,7 @@ class businesses : ComponentActivity() {
                         fontSize = 25.sp,
                         fontFamily = fontFamily,
                         fontWeight = FontWeight.SemiBold,
-                        modifier = Modifier.padding(top = 15.dp ,start = 20.dp)
+                        modifier = Modifier.padding(top = 15.dp, start = 20.dp)
                     )
 
                     // first row with 3 cards
@@ -97,7 +93,9 @@ class businesses : ComponentActivity() {
                                     .clickable {
                                         Toast
                                             .makeText(
-                                                applicationContext, "Agriculture", Toast.LENGTH_SHORT
+                                                applicationContext,
+                                                "Agriculture",
+                                                Toast.LENGTH_SHORT
                                             )
                                             .show()
                                     },
@@ -563,7 +561,9 @@ class businesses : ComponentActivity() {
                                     .clickable {
                                         Toast
                                             .makeText(
-                                                applicationContext, "Grain Market", Toast.LENGTH_SHORT
+                                                applicationContext,
+                                                "Grain Market",
+                                                Toast.LENGTH_SHORT
                                             )
                                             .show()
                                     },
@@ -782,7 +782,9 @@ class businesses : ComponentActivity() {
                                     .clickable {
                                         Toast
                                             .makeText(
-                                                applicationContext, "Marriage Hall", Toast.LENGTH_SHORT
+                                                applicationContext,
+                                                "Marriage Hall",
+                                                Toast.LENGTH_SHORT
                                             )
                                             .show()
                                     },
@@ -822,7 +824,9 @@ class businesses : ComponentActivity() {
                                     .clickable {
                                         Toast
                                             .makeText(
-                                                applicationContext, "Mobile Accessories", Toast.LENGTH_SHORT
+                                                applicationContext,
+                                                "Mobile Accessories",
+                                                Toast.LENGTH_SHORT
                                             )
                                             .show()
                                     },
@@ -911,7 +915,9 @@ class businesses : ComponentActivity() {
                                     .clickable {
                                         Toast
                                             .makeText(
-                                                applicationContext, "Photo & Copy Shop", Toast.LENGTH_SHORT
+                                                applicationContext,
+                                                "Photo & Copy Shop",
+                                                Toast.LENGTH_SHORT
                                             )
                                             .show()
                                     },
@@ -952,7 +958,9 @@ class businesses : ComponentActivity() {
                                     .clickable {
                                         Toast
                                             .makeText(
-                                                applicationContext, "Property Dealer", Toast.LENGTH_SHORT
+                                                applicationContext,
+                                                "Property Dealer",
+                                                Toast.LENGTH_SHORT
                                             )
                                             .show()
                                     },
@@ -1043,7 +1051,9 @@ class businesses : ComponentActivity() {
                                     .clickable {
                                         Toast
                                             .makeText(
-                                                applicationContext, "Steel $ Iron", Toast.LENGTH_SHORT
+                                                applicationContext,
+                                                "Steel $ Iron",
+                                                Toast.LENGTH_SHORT
                                             )
                                             .show()
                                     },
@@ -1132,7 +1142,9 @@ class businesses : ComponentActivity() {
                                     .clickable {
                                         Toast
                                             .makeText(
-                                                applicationContext, "Tehsil Office", Toast.LENGTH_SHORT
+                                                applicationContext,
+                                                "Tehsil Office",
+                                                Toast.LENGTH_SHORT
                                             )
                                             .show()
                                     },
@@ -1197,44 +1209,44 @@ class businesses : ComponentActivity() {
                         }
 
                         //third row third card
-/*                        Card(
-                            elevation = 6.dp,
-                            shape = RoundedCornerShape(15.dp),
-                            backgroundColor = Color(0xFFFFFFFF),
-                            modifier = Modifier.padding(20.dp)
-                        ) {
-                            Column(
-                                horizontalAlignment = Alignment.CenterHorizontally,
-                                verticalArrangement = Arrangement.Center,
-                                modifier = Modifier
-                                    .height(90.dp)
-                                    .width(90.dp)
-                                    .clickable {
-                                        Toast
-                                            .makeText(
-                                                applicationContext, "Unknown", Toast.LENGTH_SHORT
-                                            )
-                                            .show()
-                                    },
+                        /*                        Card(
+                                                    elevation = 6.dp,
+                                                    shape = RoundedCornerShape(15.dp),
+                                                    backgroundColor = Color(0xFFFFFFFF),
+                                                    modifier = Modifier.padding(20.dp)
+                                                ) {
+                                                    Column(
+                                                        horizontalAlignment = Alignment.CenterHorizontally,
+                                                        verticalArrangement = Arrangement.Center,
+                                                        modifier = Modifier
+                                                            .height(90.dp)
+                                                            .width(90.dp)
+                                                            .clickable {
+                                                                Toast
+                                                                    .makeText(
+                                                                        applicationContext, "Unknown", Toast.LENGTH_SHORT
+                                                                    )
+                                                                    .show()
+                                                            },
 
-                                ) {
-                                Image(
-                                    painter = painterResource(id = R.drawable.transport),
-                                    contentDescription = null,
-                                    modifier = Modifier
-                                        .height(50.dp)
-                                        .width(50.dp)
-                                )
-                                Text(
-                                    text = "Unknown",
-                                    color = Color.Black,
-                                    fontSize = 15.sp,
-                                    fontFamily = fontFamily,
-                                    fontWeight = FontWeight.Light,
-                                    modifier = Modifier.padding(top = 10.dp)
-                                )
-                            }
-                        }*/
+                                                        ) {
+                                                        Image(
+                                                            painter = painterResource(id = R.drawable.transport),
+                                                            contentDescription = null,
+                                                            modifier = Modifier
+                                                                .height(50.dp)
+                                                                .width(50.dp)
+                                                        )
+                                                        Text(
+                                                            text = "Unknown",
+                                                            color = Color.Black,
+                                                            fontSize = 15.sp,
+                                                            fontFamily = fontFamily,
+                                                            fontWeight = FontWeight.Light,
+                                                            modifier = Modifier.padding(top = 10.dp)
+                                                        )
+                                                    }
+                                                }*/
                     }
                     //categories end
                 }
