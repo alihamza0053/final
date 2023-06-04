@@ -91,13 +91,13 @@ class menuActivity : ComponentActivity() {
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(0xFFFFD700))
+                        .background(Color(0xFFADD8E6))
 
 
                 ) {
                     Row(
                         modifier = Modifier
-                            .background(Color(0xFFe04556))
+                            .background(Color(0xFF800080))
                             .fillMaxWidth()
                             .padding(10.dp),
                         verticalAlignment = Alignment.CenterVertically
@@ -133,8 +133,12 @@ class menuActivity : ComponentActivity() {
                             fontSize = 20.sp,
                             fontFamily = fontFamily,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF000000),
+                            color = Color(0xFFFFFFFF),
                         )
+                        Image(painter = painterResource(id = R.drawable.admin_king), contentDescription = null,
+                        modifier = Modifier
+                            .width(15.dp)
+                            .height(15.dp))
                         Spacer(
                             modifier = Modifier
                                 .weight(1f)
@@ -217,7 +221,12 @@ class menuActivity : ComponentActivity() {
                                         .height(90.dp)
                                         .width(90.dp)
                                         .clickable {
-                                            context.startActivity(Intent(context, businesses::class.java))
+                                            context.startActivity(
+                                                Intent(
+                                                    context,
+                                                    businesses::class.java
+                                                )
+                                            )
                                         },
 
                                     ) {
