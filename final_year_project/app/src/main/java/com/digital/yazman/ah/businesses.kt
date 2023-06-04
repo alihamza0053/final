@@ -104,7 +104,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.businesses),
+                                    painter = painterResource(id = R.drawable.agriculture),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -144,7 +144,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.emergency),
+                                    painter = painterResource(id = R.drawable.aluminium),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -184,7 +184,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.history),
+                                    painter = painterResource(id = R.drawable.automobile),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -234,7 +234,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.local_deal),
+                                    painter = painterResource(id = R.drawable.banks),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -274,7 +274,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.local_news),
+                                    painter = painterResource(id = R.drawable.books),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -316,7 +316,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.opportunities),
+                                    painter = painterResource(id = R.drawable.clothing),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -363,7 +363,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.services),
+                                    painter = painterResource(id = R.drawable.computeraccessories),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -403,7 +403,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.supprot),
+                                    painter = painterResource(id = R.drawable.education),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -443,7 +443,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.transport),
+                                    painter = painterResource(id = R.drawable.electrics),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -490,7 +490,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.businesses),
+                                    painter = painterResource(id = R.drawable.footwear),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -530,7 +530,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.emergency),
+                                    painter = painterResource(id = R.drawable.freshmeat),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -570,7 +570,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.history),
+                                    painter = painterResource(id = R.drawable.grainmarket),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -620,7 +620,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.local_deal),
+                                    painter = painterResource(id = R.drawable.grocery),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -660,7 +660,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.local_news),
+                                    painter = painterResource(id = R.drawable.jewelry),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -702,7 +702,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.opportunities),
+                                    painter = painterResource(id = R.drawable.machinework),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -749,7 +749,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.services),
+                                    painter = painterResource(id = R.drawable.marble),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -789,7 +789,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.supprot),
+                                    painter = painterResource(id = R.drawable.marriagehall),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -829,7 +829,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.transport),
+                                    painter = painterResource(id = R.drawable.mobileaccessories),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -878,7 +878,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.businesses),
+                                    painter = painterResource(id = R.drawable.petroleum),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -918,7 +918,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.emergency),
+                                    painter = painterResource(id = R.drawable.photoshop),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -959,7 +959,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.history),
+                                    painter = painterResource(id = R.drawable.propertydealer),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -1010,7 +1010,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.local_deal),
+                                    painter = painterResource(id = R.drawable.restaurant),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -1050,7 +1050,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.local_news),
+                                    painter = painterResource(id = R.drawable.steeliron),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -1092,7 +1092,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.opportunities),
+                                    painter = painterResource(id = R.drawable.sweets),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -1139,7 +1139,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.services),
+                                    painter = painterResource(id = R.drawable.tehsiloffice),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -1179,7 +1179,7 @@ class businesses : ComponentActivity() {
 
                                 ) {
                                 Image(
-                                    painter = painterResource(id = R.drawable.supprot),
+                                    painter = painterResource(id = R.drawable.woodworking),
                                     contentDescription = null,
                                     modifier = Modifier
                                         .height(50.dp)
@@ -1197,7 +1197,7 @@ class businesses : ComponentActivity() {
                         }
 
                         //third row third card
-                        Card(
+/*                        Card(
                             elevation = 6.dp,
                             shape = RoundedCornerShape(15.dp),
                             backgroundColor = Color(0xFFFFFFFF),
@@ -1234,7 +1234,7 @@ class businesses : ComponentActivity() {
                                     modifier = Modifier.padding(top = 10.dp)
                                 )
                             }
-                        }
+                        }*/
                     }
                     //categories end
                 }
