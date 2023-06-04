@@ -84,9 +84,14 @@ class Emergency : ComponentActivity() {
                             modifier = Modifier
                                 .width(200.dp)
                                 .height(200.dp)
-                                .padding(bottom = 20.dp),
+                                .padding(bottom = 20.dp)
+                                .clickable {
+                                    Toast
+                                        .makeText(applicationContext, "1122", Toast.LENGTH_SHORT)
+                                        .show()
+                                },
 
-                        )
+                            )
 
 
                         //first row with 2 cards
@@ -122,11 +127,11 @@ class Emergency : ComponentActivity() {
 
                                     ) {
                                     Image(
-                                        painter = painterResource(id = R.drawable.agriculture),
+                                        painter = painterResource(id = R.drawable.ambulance),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(70.dp)
+                                            .width(70.dp)
                                     )
                                     Text(
                                         text = "Ambulance",
@@ -134,7 +139,7 @@ class Emergency : ComponentActivity() {
                                         fontSize = 15.sp,
                                         fontFamily = fontFamily,
                                         fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
+                                        modifier = Modifier.padding( bottom = 5.dp)
                                     )
                                 }
                             }
@@ -166,11 +171,11 @@ class Emergency : ComponentActivity() {
 
                                     ) {
                                     Image(
-                                        painter = painterResource(id = R.drawable.aluminium),
+                                        painter = painterResource(id = R.drawable.child_protection),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(70.dp)
+                                            .width(70.dp)
                                     )
                                     Text(
                                         text = "Child Protection",
@@ -178,7 +183,7 @@ class Emergency : ComponentActivity() {
                                         fontSize = 15.sp,
                                         fontFamily = fontFamily,
                                         fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
+                                        modifier = Modifier.padding(top = 5.dp, bottom = 5.dp)
                                     )
                                 }
                             }
@@ -217,11 +222,11 @@ class Emergency : ComponentActivity() {
 
                                     ) {
                                     Image(
-                                        painter = painterResource(id = R.drawable.agriculture),
+                                        painter = painterResource(id = R.drawable.fire_brigade),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(70.dp)
+                                            .width(70.dp)
                                     )
                                     Text(
                                         text = "Fire Brigade",
@@ -229,7 +234,7 @@ class Emergency : ComponentActivity() {
                                         fontSize = 15.sp,
                                         fontFamily = fontFamily,
                                         fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
+                                        modifier = Modifier.padding(bottom = 5.dp)
                                     )
                                 }
                             }
@@ -261,11 +266,11 @@ class Emergency : ComponentActivity() {
 
                                     ) {
                                     Image(
-                                        painter = painterResource(id = R.drawable.aluminium),
+                                        painter = painterResource(id = R.drawable.gase_leakage),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(70.dp)
+                                            .width(70.dp)
                                     )
                                     Text(
                                         text = "Gas leakage",
@@ -273,7 +278,7 @@ class Emergency : ComponentActivity() {
                                         fontSize = 15.sp,
                                         fontFamily = fontFamily,
                                         fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
+                                        modifier = Modifier.padding(bottom = 5.dp)
                                     )
                                 }
                             }
@@ -309,11 +314,12 @@ class Emergency : ComponentActivity() {
 
                                     ) {
                                     Image(
-                                        painter = painterResource(id = R.drawable.agriculture),
+                                        painter = painterResource(id = R.drawable.policeman),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(70.dp)
+                                            .width(70.dp)
+                                            .padding(top = 5.dp)
                                     )
                                     Text(
                                         text = "Police",
@@ -321,7 +327,7 @@ class Emergency : ComponentActivity() {
                                         fontSize = 15.sp,
                                         fontFamily = fontFamily,
                                         fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
+                                        modifier = Modifier.padding(top = 5.dp, bottom = 5.dp)
                                     )
                                 }
                             }
