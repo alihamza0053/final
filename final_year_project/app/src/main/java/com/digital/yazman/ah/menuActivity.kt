@@ -91,13 +91,13 @@ class menuActivity : ComponentActivity() {
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(0xFF00008B))
+                        .background(Color(0xFFFFD700))
 
 
                 ) {
                     Row(
                         modifier = Modifier
-                            .background(Color(0xFF8394A4))
+                            .background(Color(0xFFe04556))
                             .fillMaxWidth()
                             .padding(10.dp),
                         verticalAlignment = Alignment.CenterVertically
@@ -133,7 +133,7 @@ class menuActivity : ComponentActivity() {
                             fontSize = 20.sp,
                             fontFamily = fontFamily,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF422c1f),
+                            color = Color(0xFF000000),
                         )
                         Spacer(
                             modifier = Modifier
@@ -144,7 +144,7 @@ class menuActivity : ComponentActivity() {
                             fontSize = 15.sp,
                             fontFamily = fontFamily,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFF422c1f),
+                            color = Color(0xFFFFFFFF),
                             modifier = Modifier
                                 .clickable {
                                     Toast.makeText(
@@ -162,7 +162,7 @@ class menuActivity : ComponentActivity() {
                     Column(modifier = Modifier.weight(1f)) {
                         Text(
                             text = "Announcements",
-                            color = Color(0xFF422c1f),
+                            color = Color(0xFF000000),
                             fontSize = 25.sp,
                             fontFamily = fontFamily,
                             fontWeight = FontWeight.SemiBold,
@@ -189,7 +189,7 @@ class menuActivity : ComponentActivity() {
                         //categories start
                         Text(
                             text = "Categories",
-                            color = Color(0xFF422c1f),
+                            color = Color(0xFF000000),
                             fontSize = 25.sp,
                             fontFamily = fontFamily,
                             fontWeight = FontWeight.SemiBold,
@@ -207,7 +207,7 @@ class menuActivity : ComponentActivity() {
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
-                                backgroundColor = Color(0xFFFFFFFF),
+                                backgroundColor = Color(0xFFf2f2f2),
                                 modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(

@@ -60,7 +60,7 @@ class businesses : ComponentActivity() {
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
-                        .background(Color(0xFFf6d7b0))
+                        .background(Color(0xFFFFD700))
                         .verticalScroll(rememberScrollState())
 
 
@@ -68,7 +68,7 @@ class businesses : ComponentActivity() {
                     //business start
                     Text(
                         text = "Businesses",
-                        color = Color(0xFF422c1f),
+                        color = Color(0xFF000000),
                         fontSize = 25.sp,
                         fontFamily = fontFamily,
                         fontWeight = FontWeight.SemiBold,
