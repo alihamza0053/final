@@ -60,7 +60,7 @@ class Opportunities : ComponentActivity() {
                         .verticalScroll(rememberScrollState())
                 ) {
                     Text(
-                        text = "Local News",
+                        text = "Opportunities"",
                         color = Color(0xFF000000),
                         fontSize = 25.sp,
                         fontFamily = fontFamily,
