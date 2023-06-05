@@ -104,7 +104,7 @@ class Signup : ComponentActivity() {
                         onValueChange = {
                             name = it
                         },
-                        label = { Text(text = "Email") },
+                        label = { Text(text = "Name") },
                         modifier = Modifier.fillMaxWidth(),
                         keyboardOptions = KeyboardOptions(
                             keyboardType = KeyboardType.Text,
