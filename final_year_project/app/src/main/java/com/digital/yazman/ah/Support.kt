@@ -66,6 +66,10 @@ class Support : ComponentActivity() {
                 mutableStateOf(Color(0xFF000000))
             }
 
+            var visible by remember {
+                mutableStateOf(true)
+            }
+
             DigitalYazmanTheme {
                 Column(
                     modifier = Modifier
@@ -105,7 +109,7 @@ class Support : ComponentActivity() {
                                     white_text = Color(0xFFFFFFFF)
                                     purple_bg = Color(0xFF800080)
                                     white_bg = Color(0xFFFFFFFF)
-
+                                    visible = true
                                 }
                         )
                         Spacer(modifier = Modifier.padding(10.dp))
@@ -126,12 +130,21 @@ class Support : ComponentActivity() {
                                     white_text = Color(0xFF000000)
                                     purple_bg = Color(0xFFFFFFFF)
                                     white_bg = Color(0xFF800080)
-
+                                    visible = false
                                 }
                         )
                         Spacer(modifier = Modifier.padding(10.dp))
 
 
+                    }
+                    
+                    Column {
+                        if(visible) {
+                            Text(text = "FAQ")
+                        }
+                        if(!visible){
+                            Text(text = "Contact")
+                        }
                     }
                 }
             }
