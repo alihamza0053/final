@@ -78,7 +78,7 @@ class Support : ComponentActivity() {
                     //business start
                     Text(
                         text = "Support",
-                        color = Color(0xFFFFFFFF),
+                        color = Color(0xFF000000),
                         fontSize = 25.sp,
                         fontFamily = fontFamily,
                         fontWeight = FontWeight.SemiBold,
