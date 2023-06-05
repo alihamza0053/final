@@ -50,7 +50,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import com.digital.yazman.ah.ui.theme.DigitalYazmanTheme
 
-class Login : ComponentActivity() {
+class Signup : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -66,6 +66,10 @@ class Login : ComponentActivity() {
                 Font(R.font.lexend_semibold, FontWeight.SemiBold),
                 Font(R.font.lexend_thin, FontWeight.Thin),
             )
+
+            var name by remember {
+                mutableStateOf("")
+            }
             var email by remember {
                 mutableStateOf("")
             }
@@ -87,13 +91,30 @@ class Login : ComponentActivity() {
                 ) {
                     //business start
                     Text(
-                        text = "Login",
+                        text = "Sign up",
                         color = Color(0xFF000000),
                         fontSize = 25.sp,
                         fontFamily = fontFamily,
                         fontWeight = FontWeight.SemiBold,
                         modifier = Modifier.padding(top = 15.dp, start = 20.dp)
                     )
+
+                    OutlinedTextField(
+                        value = name,
+                        onValueChange = {
+                            name = it
+                        },
+                        label = { Text(text = "Email") },
+                        modifier = Modifier.fillMaxWidth(),
+                        keyboardOptions = KeyboardOptions(
+                            keyboardType = KeyboardType.Text,
+                        ),
+                        textStyle = TextStyle.Default.copy(
+                            fontFamily = fontFamily,
+                            fontWeight = FontWeight.Normal,
+                        )
+                    )
+
                     OutlinedTextField(
                         value = email,
                         onValueChange = {
@@ -128,7 +149,7 @@ class Login : ComponentActivity() {
                     Button(
                         onClick = {
                             Toast.makeText(
-                                applicationContext, "Login", Toast.LENGTH_SHORT
+                                applicationContext, "Sign up", Toast.LENGTH_SHORT
                             ).show()
                         },
                         shape = RoundedCornerShape(3.dp),
@@ -136,7 +157,7 @@ class Login : ComponentActivity() {
                         colors = ButtonDefaults.buttonColors(Color(0xFF800080))
                     ) {
                         Text(
-                            text = "Login", fontSize = 20.sp, color = Color(0xFFFFFFFF),
+                            text = "Sign up", fontSize = 20.sp, color = Color(0xFFFFFFFF),
                             fontFamily = fontFamily,
                             fontWeight = FontWeight.SemiBold,
                         )
@@ -148,7 +169,7 @@ class Login : ComponentActivity() {
                             .padding(top = 10.dp)
                     ) {
                         Text(
-                            text = "Do not have account!",
+                            text = "Already have account!",
                             color = Color(0xFF000000),
                             fontFamily = fontFamily,
                             fontWeight = FontWeight.Normal,
@@ -160,13 +181,13 @@ class Login : ComponentActivity() {
                         )
 
                         Text(
-                            text = "Sign Up",
+                            text = "Login",
                             color = Color(0xFF800080),
                             fontFamily = fontFamily,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier
                                 .clickable {
-                                    startActivity(Intent(context, Signup::class.java))
+                                    startActivity(Intent(context, Login::class.java))
                                 }
                         )
                     }

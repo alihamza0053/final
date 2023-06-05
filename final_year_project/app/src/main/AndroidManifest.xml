@@ -14,63 +14,61 @@
         android:theme="@style/Theme.DigitalYazman"
         tools:targetApi="31">
         <activity
+            android:name=".Signup"
+            android:exported="true"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/Theme.DigitalYazman">
+        </activity>
+        <activity
             android:name=".Login"
             android:exported="true"
             android:label="@string/title_activity_login"
-            android:theme="@style/Theme.DigitalYazman">
-        </activity>
+            android:theme="@style/Theme.DigitalYazman"></activity>
         <activity
             android:name=".Transport"
             android:exported="true"
             android:label="@string/title_activity_transport"
-            android:theme="@style/Theme.DigitalYazman"></activity>
+            android:theme="@style/Theme.DigitalYazman" />
         <activity
             android:name=".Support"
             android:exported="true"
             android:label="@string/title_activity_support"
-            android:theme="@style/Theme.DigitalYazman"></activity>
+            android:theme="@style/Theme.DigitalYazman" />
         <activity
             android:name=".Services"
             android:exported="true"
             android:label="@string/title_activity_services"
-            android:theme="@style/Theme.DigitalYazman">
-        </activity>
+            android:theme="@style/Theme.DigitalYazman"></activity>
         <activity
             android:name=".Opportunities"
             android:exported="true"
             android:label="@string/title_activity_opportunities"
-            android:theme="@style/Theme.DigitalYazman">
-        </activity>
+            android:theme="@style/Theme.DigitalYazman"></activity>
         <activity
             android:name=".LocalNews"
             android:exported="true"
             android:label="@string/title_activity_local_news"
-            android:theme="@style/Theme.DigitalYazman">
-        </activity>
+            android:theme="@style/Theme.DigitalYazman"></activity>
         <activity
             android:name=".LocalDeals"
             android:exported="true"
             android:label="@string/title_activity_local_deals"
-            android:theme="@style/Theme.DigitalYazman">
-        </activity>
+            android:theme="@style/Theme.DigitalYazman"></activity>
         <activity
             android:name=".History"
             android:exported="true"
             android:label="@string/title_activity_history"
-            android:theme="@style/Theme.DigitalYazman">
-        </activity>
+            android:theme="@style/Theme.DigitalYazman"></activity>
         <activity
             android:name=".Emergency"
             android:exported="true"
             android:label="@string/title_activity_emergency"
-            android:theme="@style/Theme.DigitalYazman">
-        </activity>
+            android:theme="@style/Theme.DigitalYazman"></activity>
         <activity
             android:name=".Businesses"
             android:exported="true"
             android:label="@string/title_activity_businesses"
-            android:theme="@style/Theme.DigitalYazman">
-        </activity>
+            android:theme="@style/Theme.DigitalYazman"></activity>
         <activity
             android:name=".menuActivity"
             android:exported="true"
