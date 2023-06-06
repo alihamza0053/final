@@ -14,11 +14,17 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.SnackbarDefaults.backgroundColor
+import androidx.compose.material3.AlertDialogDefaults.shape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -61,32 +67,35 @@ fun MainColumn() {
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier.padding(top = 15.dp, start = 20.dp)
         )
-        Bus()
+        Bus("Fasial Movers","03065600053","12:00pm","3:00pm","Yazman","Multan","1200","12","3 Hours")
+
     }
 
 }
 
 @Composable
-fun Bus() {
+fun Bus(busName:String, busNumber:String,startTime:String,arivalTime:String,startPoint:String,destination:String,ticketPrice:String,distance:String,timeTaken:String) {
     Column(
         modifier = Modifier
             .padding(20.dp)
             .fillMaxWidth()
-            .background(Color.White)
+            .background(Color.White),
     ) {
+
+        //first row
         Row(
             modifier = Modifier
                 .padding(start = 20.dp, top = 5.dp, end = 20.dp, bottom = 5.dp)
         ) {
             Text(
-                text = "Faisal Movers",
+                text = busName,
                 fontFamily = fontFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 15.sp
             )
             Spacer(modifier = Modifier.weight(1f))
             Text(
-                text = "03065600053",
+                text = busNumber,
                 fontFamily = fontFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 15.sp
@@ -98,24 +107,28 @@ fun Bus() {
                 .fillMaxWidth()
                 .height(2.dp)
         )
+
+
+        //second row
         Row(
             modifier = Modifier
-                .padding(start = 20.dp, top = 5.dp, end = 20.dp, bottom = 5.dp)
+                .padding(start = 20.dp, top = 5.dp, end = 20.dp, bottom = 5.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
             Column(
                 modifier = Modifier
                     .padding(end = 20.dp)
             ) {
                 Text(
-                    text = "12:00pm",
+                    text = startTime,
                     fontFamily = fontFamily,
                     fontWeight = FontWeight.Medium,
                     fontSize = 18.sp,
                     modifier = Modifier
-                        .padding(bottom = 15.dp)
+                        .padding(bottom = 17.dp)
                 )
                 Text(
-                    text = "3:00pm",
+                    text = arivalTime,
                     fontFamily = fontFamily,
                     fontWeight = FontWeight.Medium,
                     fontSize = 18.sp
@@ -131,18 +144,33 @@ fun Bus() {
             )
             Column {
                 Text(
-                    text = "Yazman",
+                    text = startPoint,
                     fontFamily = fontFamily,
                     fontWeight = FontWeight.Medium,
                     fontSize = 18.sp,
                     modifier = Modifier
-                        .padding(bottom = 15.dp)
+                        .padding(bottom = 17.dp)
                 )
                 Text(
-                    text = "Multan",
+                    text = destination,
                     fontFamily = fontFamily,
                     fontWeight = FontWeight.Medium,
                     fontSize = 18.sp
+                )
+            }
+            Card(
+                colors = CardDefaults.cardColors(Color(0xFF800080)),
+                shape = RoundedCornerShape(10.dp),
+                modifier = Modifier.padding(start = 30.dp),
+            ) {
+
+                Text(
+                    text = ticketPrice + "Rs",
+                    fontFamily = fontFamily,
+                    fontWeight = FontWeight.Medium,
+                    color = Color.White,
+                    modifier = Modifier
+                        .padding(10.dp)
                 )
             }
         }
@@ -152,19 +180,22 @@ fun Bus() {
                 .fillMaxWidth()
                 .height(2.dp)
         )
+
+
+        //third row
         Row(
             modifier = Modifier
                 .padding(start = 20.dp, top = 5.dp, end = 20.dp, bottom = 5.dp)
         ) {
             Text(
-                text = "12km",
+                text = distance + "km",
                 fontFamily = fontFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 15.sp
             )
             Spacer(modifier = Modifier.weight(1f))
             Text(
-                text = "Time 3 hours",
+                text = "Time $timeTaken",
                 fontFamily = fontFamily,
                 fontWeight = FontWeight.Normal,
                 fontSize = 15.sp
