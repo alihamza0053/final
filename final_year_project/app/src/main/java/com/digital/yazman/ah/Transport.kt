@@ -60,14 +60,16 @@ fun MainColumn() {
 
     ) {
         Text(
-            text = "Yazman Mandi",
+            text = "Transportation",
             color = Color(0xFF000000),
             fontSize = 25.sp,
             fontFamily = fontFamily,
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier.padding(top = 15.dp, start = 20.dp)
         )
-        Bus("Fasial Movers","03065600053","12:00pm","3:00pm","Yazman","Multan","1200","12","3 Hours")
+        Bus("Fasial Movers","03065600053","12:00pm","03:00pm","Yazman","Multan","1200","300","3 Hours")
+        Bus("Niazi Express","03065600053","06:00am","12:00pm","Yazman","Lahore","1500","500","6 Hours")
+
 
     }
 
