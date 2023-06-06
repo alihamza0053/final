@@ -86,7 +86,7 @@ class Support : ComponentActivity() {
                         fontSize = 25.sp,
                         fontFamily = fontFamily,
                         fontWeight = FontWeight.SemiBold,
-                        modifier = Modifier.padding(top = 15.dp, start = 20.dp)
+                        modifier = Modifier.padding(top = 15.dp, start = 20.dp, bottom = 10.dp)
                     )
                     Row(
                         modifier = Modifier.padding(5.dp),
@@ -130,7 +130,7 @@ class Support : ComponentActivity() {
                                     white_text = Color(0xFF000000)
                                     purple_bg = Color(0xFFFFFFFF)
                                     white_bg = Color(0xFF800080)
-                                    visible = false
+                                    visible = false 
                                 }
                         )
                         Spacer(modifier = Modifier.padding(10.dp))

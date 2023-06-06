@@ -163,6 +163,57 @@ class Emergency : ComponentActivity() {
                                             Toast
                                                 .makeText(
                                                     applicationContext,
+                                                    "Blood Donors",
+                                                    Toast.LENGTH_SHORT
+                                                )
+                                                .show()
+                                        },
+
+                                    ) {
+                                    Image(
+                                        painter = painterResource(id = R.drawable.blood_donation),
+                                        contentDescription = null,
+                                        modifier = Modifier
+                                            .height(70.dp)
+                                            .width(70.dp)
+                                    )
+                                    Text(
+                                        text = "Blood Donors",
+                                        color = Color.Black,
+                                        fontSize = 15.sp,
+                                        fontFamily = fontFamily,
+                                        fontWeight = FontWeight.Light,
+                                        modifier = Modifier.padding(top = 5.dp, bottom = 5.dp)
+                                    )
+                                }
+                            }
+                        }
+
+                        //second row with 2 cards
+                        Row(
+                            horizontalArrangement = Arrangement.Center,
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            //second row first card
+                            Card(
+                                elevation = 6.dp,
+                                backgroundColor = Color(0xFFFFFFFF),
+                                modifier = Modifier
+                                    .padding(20.dp)
+                                    .weight(1f)
+                            ) {
+                                Column(
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center,
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .height(100.dp)
+                                        .weight(1f)
+                                        .clickable {
+                                            Toast
+                                                .makeText(
+                                                    applicationContext,
                                                     "Child Protection",
                                                     Toast.LENGTH_SHORT
                                                 )
@@ -183,19 +234,12 @@ class Emergency : ComponentActivity() {
                                         fontSize = 15.sp,
                                         fontFamily = fontFamily,
                                         fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 5.dp, bottom = 5.dp)
+                                        modifier = Modifier.padding(bottom = 5.dp)
                                     )
                                 }
                             }
-                        }
 
-                        //second row with 2 cards
-                        Row(
-                            horizontalArrangement = Arrangement.Center,
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            //second row first card
+                            //second row second card
                             Card(
                                 elevation = 6.dp,
                                 backgroundColor = Color(0xFFFFFFFF),
@@ -238,8 +282,14 @@ class Emergency : ComponentActivity() {
                                     )
                                 }
                             }
+                        }
 
-                            //second row second card
+                        Row(
+                            horizontalArrangement = Arrangement.Center,
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            //second row first card
                             Card(
                                 elevation = 6.dp,
                                 backgroundColor = Color(0xFFFFFFFF),
@@ -282,20 +332,14 @@ class Emergency : ComponentActivity() {
                                     )
                                 }
                             }
-                        }
 
-                        //third row with 1 cards
-                        Row(
-                            horizontalArrangement = Arrangement.Center,
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            //second row first card
+                            //second row second card
                             Card(
                                 elevation = 6.dp,
                                 backgroundColor = Color(0xFFFFFFFF),
                                 modifier = Modifier
                                     .padding(20.dp)
+                                    .weight(1f)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -307,7 +351,9 @@ class Emergency : ComponentActivity() {
                                         .clickable {
                                             Toast
                                                 .makeText(
-                                                    applicationContext, "Police", Toast.LENGTH_SHORT
+                                                    applicationContext,
+                                                    "Police",
+                                                    Toast.LENGTH_SHORT
                                                 )
                                                 .show()
                                         },
@@ -319,7 +365,6 @@ class Emergency : ComponentActivity() {
                                         modifier = Modifier
                                             .height(70.dp)
                                             .width(70.dp)
-                                            .padding(top = 5.dp)
                                     )
                                     Text(
                                         text = "Police",
@@ -327,7 +372,7 @@ class Emergency : ComponentActivity() {
                                         fontSize = 15.sp,
                                         fontFamily = fontFamily,
                                         fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 5.dp, bottom = 5.dp)
+                                        modifier = Modifier.padding(bottom = 5.dp)
                                     )
                                 }
                             }
