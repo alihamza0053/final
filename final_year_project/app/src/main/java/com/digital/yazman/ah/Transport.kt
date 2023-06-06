@@ -69,6 +69,12 @@ fun MainColumn() {
         )
         Bus("Fasial Movers","03065600053","12:00pm","03:00pm","Yazman","Multan","1200","300","3 Hours")
         Bus("Niazi Express","03065600053","06:00am","12:00pm","Yazman","Lahore","1500","500","6 Hours")
+        Bus("Fasial Movers","03065600053","12:00pm","03:00pm","Yazman","Multan","1200","300","3 Hours")
+        Bus("Niazi Express","03065600053","06:00am","12:00pm","Yazman","Lahore","1500","500","6 Hours")
+        Bus("Fasial Movers","03065600053","12:00pm","03:00pm","Yazman","Multan","1200","300","3 Hours")
+        Bus("Niazi Express","03065600053","06:00am","12:00pm","Yazman","Lahore","1500","500","6 Hours")
+        Bus("Fasial Movers","03065600053","12:00pm","03:00pm","Yazman","Multan","1200","300","3 Hours")
+        Bus("Niazi Express","03065600053","06:00am","12:00pm","Yazman","Lahore","1500","500","6 Hours")
 
 
     }
