@@ -28,11 +28,13 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -43,6 +45,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -50,6 +53,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.unit.isUnspecified
+import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
@@ -86,14 +93,12 @@ class menuActivity : ComponentActivity() {
                     )
                 var exit = 0
                 val context = LocalContext.current
-
+                var style: TextStyle = MaterialTheme.typography.body1
                 // topbar start
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
                         .background(Color(0xFFADD8E6))
-
-
                 ) {
                     Row(
                         modifier = Modifier
@@ -147,18 +152,20 @@ class menuActivity : ComponentActivity() {
                             fontWeight = FontWeight.Bold,
                             color = Color(0xFFFFFFFF),
                             modifier = Modifier.clickable {
-                                    context.startActivity(
-                                        Intent(
-                                            context, Login::class.java
-                                        )
+                                context.startActivity(
+                                    Intent(
+                                        context, Login::class.java
                                     )
-                                })
+                                )
+                            })
                     }
 
                     // topbar end
 
                     // slides images start
-                    Column(modifier = Modifier.weight(1f)) {
+                    Column(modifier = Modifier
+                        .fillMaxSize()
+                        .weight(1f)) {
                         Text(
                             text = "Announcements",
                             color = Color(0xFF000000),
@@ -195,25 +202,28 @@ class menuActivity : ComponentActivity() {
                             modifier = Modifier.padding(start = 20.dp, top = 1.dp)
                         )
 
+
                         // first row with 3 cards
                         Row(
                             horizontalArrangement = Arrangement.Center,
                             verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth()
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(20.dp)
+                                .weight(1f)
                         ) {
                             //first row first card
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
                                 backgroundColor = Color(0xFFf2f2f2),
-                                modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center,
                                     modifier = Modifier
-                                        .height(90.dp)
-                                        .width(90.dp)
+                                        .height(80.dp)
+                                        .width(80.dp)
                                         .clickable {
                                             context.startActivity(
                                                 Intent(
@@ -227,33 +237,26 @@ class menuActivity : ComponentActivity() {
                                         painter = painterResource(id = R.drawable.businesses),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(40.dp)
+                                            .width(40.dp)
                                     )
-                                    Text(
-                                        text = "Businesses",
-                                        color = Color.Black,
-                                        fontSize = 15.sp,
-                                        fontFamily = fontFamily,
-                                        fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
-                                    )
+                                    AllTexts("Business")
                                 }
                             }
 
+                            Spacer(modifier = Modifier.weight(1f))
                             //first row second card
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
                                 backgroundColor = Color(0xFFFFFFFF),
-                                modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center,
                                     modifier = Modifier
-                                        .height(90.dp)
-                                        .width(90.dp)
+                                        .height(80.dp)
+                                        .width(80.dp)
                                         .clickable {
                                             context.startActivity(
                                                 Intent(
@@ -267,33 +270,28 @@ class menuActivity : ComponentActivity() {
                                         painter = painterResource(id = R.drawable.emergency),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(40.dp)
+                                            .width(40.dp)
                                     )
-                                    Text(
-                                        text = "Emergency",
-                                        color = Color.Black,
-                                        fontSize = 15.sp,
-                                        fontFamily = fontFamily,
-                                        fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
-                                    )
+
+                                    AllTexts("Emergency")
+
                                 }
                             }
+                            Spacer(modifier = Modifier.weight(1f))
 
                             //first row third card
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
                                 backgroundColor = Color(0xFFFFFFFF),
-                                modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center,
                                     modifier = Modifier
-                                        .height(90.dp)
-                                        .width(90.dp)
+                                        .height(80.dp)
+                                        .width(80.dp)
                                         .clickable {
                                             context.startActivity(
                                                 Intent(
@@ -307,17 +305,11 @@ class menuActivity : ComponentActivity() {
                                         painter = painterResource(id = R.drawable.history),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(40.dp)
+                                            .width(40.dp)
                                     )
-                                    Text(
-                                        text = "History",
-                                        color = Color.Black,
-                                        fontSize = 15.sp,
-                                        fontFamily = fontFamily,
-                                        fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
-                                    )
+                                    AllTexts("History")
+
                                 }
                             }
                         }
@@ -327,21 +319,23 @@ class menuActivity : ComponentActivity() {
                         Row(
                             horizontalArrangement = Arrangement.Center,
                             verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth()
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(20.dp)
+                                .weight(1f)
                         ) {
                             //second row first card
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
                                 backgroundColor = Color(0xFFFFFFFF),
-                                modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center,
                                     modifier = Modifier
-                                        .height(90.dp)
-                                        .width(90.dp)
+                                        .height(80.dp)
+                                        .width(80.dp)
                                         .clickable {
                                             context.startActivity(
                                                 Intent(
@@ -355,33 +349,28 @@ class menuActivity : ComponentActivity() {
                                         painter = painterResource(id = R.drawable.local_deal),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(40.dp)
+                                            .width(40.dp)
                                     )
-                                    Text(
-                                        text = "Local Deals",
-                                        color = Color.Black,
-                                        fontSize = 15.sp,
-                                        fontFamily = fontFamily,
-                                        fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
-                                    )
+
+                                    AllTexts("Local Deals")
+
                                 }
                             }
+                            Spacer(modifier = Modifier.weight(1f))
 
                             //second row second card
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
                                 backgroundColor = Color(0xFFFFFFFF),
-                                modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center,
                                     modifier = Modifier
-                                        .height(90.dp)
-                                        .width(90.dp)
+                                        .height(80.dp)
+                                        .width(80.dp)
                                         .clickable {
                                             context.startActivity(
                                                 Intent(
@@ -395,33 +384,28 @@ class menuActivity : ComponentActivity() {
                                         painter = painterResource(id = R.drawable.local_news),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(40.dp)
+                                            .width(40.dp)
                                     )
-                                    Text(
-                                        text = "Local News",
-                                        color = Color.Black,
-                                        fontSize = 15.sp,
-                                        fontFamily = fontFamily,
-                                        fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
-                                    )
+
+                                    AllTexts("Local News")
+
                                 }
                             }
+                            Spacer(modifier = Modifier.weight(1f))
 
                             //second row third card
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
                                 backgroundColor = Color(0xFFFFFFFF),
-                                modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center,
                                     modifier = Modifier
-                                        .height(90.dp)
-                                        .width(90.dp)
+                                        .height(80.dp)
+                                        .width(80.dp)
                                         .clickable {
                                             context.startActivity(
                                                 Intent(
@@ -436,17 +420,11 @@ class menuActivity : ComponentActivity() {
                                         painter = painterResource(id = R.drawable.opportunities),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(40.dp)
+                                            .width(40.dp)
                                     )
-                                    Text(
-                                        text = "Opportunities",
-                                        color = Color.Black,
-                                        fontSize = 15.sp,
-                                        fontFamily = fontFamily,
-                                        fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
-                                    )
+                                    AllTexts("Opportunities")
+
                                 }
                             }
                         }
@@ -455,21 +433,23 @@ class menuActivity : ComponentActivity() {
                         Row(
                             horizontalArrangement = Arrangement.Center,
                             verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth()
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(20.dp)
+                                .weight(1f)
                         ) {
                             //third row first card
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
                                 backgroundColor = Color(0xFFFFFFFF),
-                                modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center,
                                     modifier = Modifier
-                                        .height(90.dp)
-                                        .width(90.dp)
+                                        .height(80.dp)
+                                        .width(80.dp)
                                         .clickable {
                                             context.startActivity(
                                                 Intent(
@@ -483,73 +463,27 @@ class menuActivity : ComponentActivity() {
                                         painter = painterResource(id = R.drawable.services),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(40.dp)
+                                            .width(40.dp)
                                     )
-                                    Text(
-                                        text = "Services",
-                                        color = Color.Black,
-                                        fontSize = 15.sp,
-                                        fontFamily = fontFamily,
-                                        fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
-                                    )
+                                    AllTexts("Services")
+
                                 }
                             }
+                            Spacer(modifier = Modifier.weight(1f))
 
                             //third row second card
                             Card(
                                 elevation = 6.dp,
                                 shape = RoundedCornerShape(15.dp),
                                 backgroundColor = Color(0xFFFFFFFF),
-                                modifier = Modifier.padding(20.dp)
                             ) {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
                                     verticalArrangement = Arrangement.Center,
                                     modifier = Modifier
-                                        .height(90.dp)
-                                        .width(90.dp)
-                                        .clickable {
-                                            context.startActivity(
-                                                Intent(
-                                                    context, Support::class.java
-                                                )
-                                            )
-                                        },
-
-                                    ) {
-                                    Image(
-                                        painter = painterResource(id = R.drawable.supprot),
-                                        contentDescription = null,
-                                        modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
-                                    )
-                                    Text(
-                                        text = "Support",
-                                        color = Color.Black,
-                                        fontSize = 15.sp,
-                                        fontFamily = fontFamily,
-                                        fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
-                                    )
-                                }
-                            }
-
-                            //third row third card
-                            Card(
-                                elevation = 6.dp,
-                                shape = RoundedCornerShape(15.dp),
-                                backgroundColor = Color(0xFFFFFFFF),
-                                modifier = Modifier.padding(20.dp)
-                            ) {
-                                Column(
-                                    horizontalAlignment = Alignment.CenterHorizontally,
-                                    verticalArrangement = Arrangement.Center,
-                                    modifier = Modifier
-                                        .height(90.dp)
-                                        .width(90.dp)
+                                        .height(80.dp)
+                                        .width(80.dp)
                                         .clickable {
                                             context.startActivity(
                                                 Intent(
@@ -563,17 +497,43 @@ class menuActivity : ComponentActivity() {
                                         painter = painterResource(id = R.drawable.transport),
                                         contentDescription = null,
                                         modifier = Modifier
-                                            .height(50.dp)
-                                            .width(50.dp)
+                                            .height(40.dp)
+                                            .width(40.dp)
                                     )
-                                    Text(
-                                        text = "Transport",
-                                        color = Color.Black,
-                                        fontSize = 15.sp,
-                                        fontFamily = fontFamily,
-                                        fontWeight = FontWeight.Light,
-                                        modifier = Modifier.padding(top = 10.dp)
+                                    AllTexts("Transport")
+                                }
+                            }
+                            Spacer(modifier = Modifier.weight(1f))
+
+                            //third row third card
+                            Card(
+                                elevation = 6.dp,
+                                shape = RoundedCornerShape(15.dp),
+                                backgroundColor = Color(0xFFFFFFFF),
+                            ) {
+                                Column(
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.Center,
+                                    modifier = Modifier
+                                        .height(80.dp)
+                                        .width(80.dp)
+                                        .clickable {
+                                            context.startActivity(
+                                                Intent(
+                                                    context, Support::class.java
+                                                )
+                                            )
+                                        },
+
+                                    ) {
+                                    Image(
+                                        painter = painterResource(id = R.drawable.supprot),
+                                        contentDescription = null,
+                                        modifier = Modifier
+                                            .height(40.dp)
+                                            .width(40.dp)
                                     )
+                                    AllTexts("Support")
                                 }
                             }
                         }
@@ -619,7 +579,7 @@ fun DotsIndicator(
             IndicatorDot(
                 color = if (index == selectedIndex) selectedColor else unSelectedColor,
                 size = dotSize
-            )
+            ) 
 
             if (index != totalDots - 1) {
                 Spacer(modifier = Modifier.padding(horizontal = 2.dp))
@@ -671,3 +631,50 @@ fun AutoSlidingCarousel(
     }
 }
 // image slider start
+
+@Composable
+fun AllTexts(
+    text: String,
+    style: TextStyle = MaterialTheme.typography.body1 ,
+    modifier: Modifier = Modifier,
+    color: Color = style.color
+) {
+    var resizedTextStyle by remember {
+        mutableStateOf(style)
+    }
+    var shouldDraw by remember {
+        mutableStateOf(false)
+    }
+
+    val defaultFontSize = MaterialTheme.typography.body1.fontSize
+
+    Text(
+        text = text,
+        color = color,
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.Light,
+        modifier = modifier
+            .padding(5.dp)
+            .drawWithContent {
+                if (shouldDraw) {
+                    drawContent()
+                }
+            },
+        softWrap = false,
+        style = resizedTextStyle,
+        onTextLayout = { result ->
+            if (result.didOverflowWidth) {
+                if (style.fontSize.isUnspecified) {
+                    resizedTextStyle = resizedTextStyle.copy(
+                        fontSize = defaultFontSize
+                    )
+                }
+                resizedTextStyle = resizedTextStyle.copy(
+                    fontSize = resizedTextStyle.fontSize * 0.95
+                )
+            } else {
+                shouldDraw = true
+            }
+        }
+    )
+}
